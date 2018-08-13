@@ -1,0 +1,22 @@
+* auto_set_new_ship: If there is only one possible spot left, it should find it.
+
+* catch errors, endwin() and return the error to the console before exiting the
+	program. MAKE IT CLEANER
+
+* As soon as everything works, ERR HANDLING AND COLOR SUPPORT!
+
+in set_new_ship:
+	# First I want this to work here, than it's time to move the init stuff
+	# to the game class
+	# If this class works, it should only save a curses window the game
+	# class can load into stdscr
+
+TODAY
+~ FIX offset
+~ FIX DRAWING order
+
+
+IDEAS
+	-> statusbar on the bottom which shows available keys to press
+	-> chatwin which can be enables using maybe c and shoes a win on the right
+		 side of the stdscr. it allows for chat with the opponent.

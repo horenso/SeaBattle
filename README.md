@@ -1,6 +1,7 @@
 # SeaBattle
-A battleship game for the terminal in Python 3 and unicurses. The game is in early development still, you can test setting ships by running
+A battleship game for the terminal in Python 3 and unicurses. The game is in early development still, you can test setting ships by running:
 ```python3 set_ships.py```
+The game was tested under linux but should run on Mac and Windows as well, but I'll work on that in the future!
 
 ## Requirements
 - Python 3.6 or newer

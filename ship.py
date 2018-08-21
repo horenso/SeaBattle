@@ -1,9 +1,9 @@
 class Ship:
-	next_id = 0
+	next_id = 1
 	def __init__(self, name, length, placed=False):
+		self.id = Ship.next_id
 		Ship.next_id += 1
 
-		self.id = Ship.next_id
 		self.name = name
 		self.length = length
 		self.placed = placed
@@ -13,10 +13,14 @@ class Ship:
 		return self.string
 
 	def __eq__(self, other):
-		"""Two ships are equal if they have the same name and the same length"""
+		'''Two ships are equal if they have the same name and the same length.'''
 		return self.name == other.name and self.length == other.length
 
 	def __hash__(self):
-		"""Two ships are different objects (in a dict for example) if the have
-		a differen name and a differenet length"""
+		'''Two ships are different objects (in a dict for example) if the have
+		a differen name and a differenet length.'''
 		return hash((self.name, self.length))
+
+	def reset_id(self):
+		'''Resets the id, since they are only relevant within one player object.'''
+		Ship.next_id = 1

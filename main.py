@@ -5,7 +5,7 @@ from setships import SetShips
 from player import Player
 
 
-p = Player('Jannis', 10)
+p = Player('Bob', 10)
 
 s = SetShips(p)
 try:

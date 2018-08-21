@@ -1,24 +1,12 @@
-from board import Board
-from ship import Ship
-from copy import deepcopy
+from player import Player
 
 default = [Ship('Aircraft carrier', 5), Ship('Battleship', 4),
 		   Ship('Cruiser', 2), Ship('Cruiser', 2), Ship('Cruiser', 2), Ship('Destroyer', 1)]
 
-class Player:
-	next_id = 1
-	def __init__(self, name, board_size, ship_list=default):
-		self.id = Player.next_id
-		Player.next_id += 1
-
-		self.name = name
-		self.board = Board(board_size)
-		self.guessBoard = Board(board_size)
-		self.ship_list = ship_list
-
+class Player_AI(Player):
 	def __str__(self):
 		"""Returns the player's name"""
-		return str(self.name)
+		return f'{self.name}'
 
 	def left_to_set(self):
 		"""Returns a sorted list of ship objects which yet need to be set."""
@@ -32,3 +20,5 @@ class Player:
 			else:
 				left.append(ship)
 		return sorted(left, key=lambda s: (s.name, s.length))
+
+		# it should only name nx shipname to the ship on the layer fuurtherst up!!!!!!!!!!!!!!

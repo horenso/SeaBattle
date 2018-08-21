@@ -1,5 +1,3 @@
-* auto_set_new_ship: If there is only one possible spot left, it should find it.
-
 * catch errors, endwin() and return the error to the console before exiting the
 	program. MAKE IT CLEANER
 
@@ -20,3 +18,5 @@ IDEAS
 	-> statusbar on the bottom which shows available keys to press
 	-> chatwin which can be enables using maybe c and shoes a win on the right
 		 side of the stdscr. it allows for chat with the opponent.
+
+1. Get uc.battle to work!
